@@ -4,7 +4,7 @@ const express = require('express');
 const path = require('path');
 const notesData = require('./db/db.json');
 const fs = require("fs")
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const { v4: uuidv4 } = require('uuid');
 const app = express();
 
@@ -12,9 +12,6 @@ app.use(express.static('public'));
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-
-
 
 app.get('/api/notes', (req, res) => {
   res.json(notesData);
@@ -27,18 +24,16 @@ app.get('/notes', (req, res) => {
 });
 //route for note.html
 
-
-
 app.post('/api/notes', (req, res) => {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
-  req.body.id=uuidv4()
+  req.body.id = uuidv4()
   const newNotes = req.body;
 
   // We then add the json the user sent to the character array
   notesData.push(newNotes);
 
-  fs.writeFileSync('./db/db.json', JSON.stringify(notesData));
+  fs.writeFileSync('./db/db.json', JSON.stringify(notesData, null, 4));
   // We then display the JSON to the users
   res.json(notesData);
 
