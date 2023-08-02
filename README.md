@@ -41,5 +41,5 @@ This application was created as part of a coding bootcamp assignment. Currently,
 *	The Express.js framework and its contributors.
 
 ## Questions
-* GitHub: https://github.com/ssherp/SVG-Logo-Maker
+* GitHub: https://github.com/ssherp/Note-Taker
 * Email: ssherpa89@gmail.com
