@@ -40,19 +40,12 @@ app.post('/api/notes', (req, res) => {
 });
 
 
+app.get('*', (req, res) =>{
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
+//listen on port
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
 });
 
-
-//set route to dp.json file
-    //GET /api/notes
-
-
-
-
-//route for post= when used wants to make a new note
-    //POST /api/notes
-//optional: route for delete= delete posted info based on id
-    //DELETE /api/notes/:id
-//listen on port

@@ -1,130 +1,45 @@
-# 11 Express.js: Note Taker
+# Note Taker App
 
-## Your Task
+## Description
+The Note Taker app is a simple web application that allows users to take and manage notes. Users can create new notes, view existing notes.
+The application is built using Express.js on the server-side to handle routing and data management, and it utilizes HTML, CSS, and JavaScript on the client-side for the user interface.
 
-Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+[deployed heroku site](https://note-taker-sonamsherpa-8736a151d7bd.herokuapp.com/)
 
-The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
+## Installation
+To run the Note Taker app locally on your machine, follow these steps:
+1.	Clone the repository to your local machine.
+2.	Make sure you have Node.js and npm (Node Package Manager) installed.
+3.	Open a terminal or command prompt and navigate to the project directory.
+4.	Run npm install to install the required dependencies.
+5.	Start the application by running npm start or node server.js.
+6.	Open your web browser and go to http://localhost:3001 to access the app.
 
+## Usage
+*	Home Page: When you access the application, you will be presented with the home page that displays a welcome message and a "Get Started" button. Clicking the "Get Started" button will take you to the notes page.
+*	Notes Page: On the notes page, you will see a list of existing notes on the left side and an empty note area on the right side.
+*	To view a note, click on the title of the note from the left-hand side list. The content of the selected note will be displayed in the note area.
+*	To create a new note, click on the "plus" icon (represented by a "+" symbol) in the navigation bar. This will clear the note area, and you can enter a new note title and content.
+*	To save a new or edited note, click on the "save" icon (represented by a floppy disk icon) in the navigation bar. The note will be saved, and it will appear in the list of existing notes on the left side.
+*	To delete a note, click on the "trash" icon (represented by a trash can icon) next to the note in the list. The note will be permanently deleted from the application.
 
-## User Story
+![screenshot](./assets/images/screencapture-note-taker.png)
 
-```
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-```
+## Technologies Used
+*	Express.js
+*	Node.js
+*	HTML
+*	CSS
+*	JavaScript
+*	UUID (for generating unique IDs for notes)
 
+## Contributing
+This application was created as part of a coding bootcamp assignment. Currently, it is not open for external contributions. However, you are welcome to fork the repository and modify the code for your own purposes.
 
-## Acceptance Criteria
+## Acknowledgments
+*	This app was built as a learning project during a coding bootcamp.
+*	The Express.js framework and its contributors.
 
-```
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-```
-
-
-## Mock-Up
-
-The following images show the web application's appearance and functionality:
-
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-challenge-demo-01.png)
-
-![Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.](./Assets/11-express-challenge-demo-02.png)
-
-
-## Getting Started
-
-On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
-
-The following HTML routes should be created:
-
-* `GET /notes` should return the `notes.html` file.
-
-* `GET *` should return the `index.html` file.
-
-The following API routes should be created:
-
-* `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
-
-* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
-
-
-## Bonus
-
-You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
-
-* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
-
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * Application front end must connect to an Express.js back end.
-
-  * Application back end must store notes that have a unique id in a JSON file.
-
-  * Application must be deployed to Heroku.
-
-
-### Deployment: 36%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-
-### Application Quality: 11%
-
-* Application console is free of errors.
-
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-### Bonus: +10 Points
-
-* Application allows users to delete notes.
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Questions
+* GitHub: https://github.com/ssherp/SVG-Logo-Maker
+* Email: ssherpa89@gmail.com
